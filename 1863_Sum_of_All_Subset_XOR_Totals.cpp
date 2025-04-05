@@ -9,8 +9,15 @@ class Solution {
     };
 
 // base_arr = 길이 1짜리 subset들 배열 생성(subset, xor값) -> 길이 = n
-// new_arr = 새로 만든 subset 저장할 배열
+//  => n = 0이면 0반환 => n > 0 보장
+// new_arr = base_arr
+// sum_xor = 0
 // while (cnt <= n) do
-//      construct subsets from base_arr
-//      new_arr = base_arr
-// sub xor values
+//      cnt == 1이면 그냥 new_arr의 원소합을 sum_xor에 더하고 cnt++
+//      temp_arr = []
+//      for(i in base_arr)
+//          for(j in new_arr)
+//              if(i not in j)
+//                  temp_arr.push(i + j)
+//                  xor값도 계산하여 저장(dynamic programming)
+// sum xor values from new_arr
